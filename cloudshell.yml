@@ -1,0 +1,13 @@
+grains:
+  database:
+    kind: cloudshell
+    spec:
+      source:
+        store: local_cs_assets 
+        path: cs_bp     
+      agent:
+      ...
+      inputs:
+        - input1: '{{ .inputs.input1 }}' 
+        - input2: '{{ .inputs.input2 }}' 
+        - input3: 'some value'      
